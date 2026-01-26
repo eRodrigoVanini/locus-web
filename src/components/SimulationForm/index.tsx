@@ -8,8 +8,15 @@ import { type ComponentProps } from "react";
 
 type SimulationFormProps = ComponentProps<"form"> & {
   btnText: string;
-  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+  handleSubmit: (data: SimulationData) => void;
   results?: any;
+};
+
+export type SimulationData = {
+  cityId: string;
+  zoneId: string;
+  useTypeId: string;
+  area: number;
 };
 
 type City = {
@@ -107,7 +114,17 @@ export function SimulationForm({
 
   const submit = (e) => {
     e.preventDefault();
-    handleSubmit(results);
+
+    //Cria o objeto com os dados que estão nos useState
+    const dadosDoFormulario = {
+      cityId: selectedCity,
+      zoneId: selectedZone,
+      useTypeId: selectedUseType,
+      area: Number(lotArea),
+    };
+
+    //Passa esse objeto para a função do pai
+    handleSubmit(dadosDoFormulario);
   };
 
   return (

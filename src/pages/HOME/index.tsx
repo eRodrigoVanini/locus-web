@@ -2,23 +2,29 @@ import { SimulationForm } from "../../components/SimulationForm";
 import "./style.css";
 
 export function Home() {
-  function handleSimulationSubmit(lot: any) {
-    lot.data = [];
+  function handleSimulationSubmit(lotData: any) {
+    if (!lotData.cityId || !lotData.area) {
+      alert("Preencha todos os campos!");
+      return;
+    }
+
+    const payload = {
+      ...lotData, // Espalha os dados (cityId, zoneId, etc.)
+    };
 
     fetch("http://localhost:3000/simulations", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(lot),
+      body: JSON.stringify(payload), // Envia o objeto montado
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log("Simulação criada:", data);
+        console.log("Sucesso:", data);
+        alert("Simulação salva com sucesso!");
       })
-      .catch((error) => {
-        console.error("Erro ao criar simulação:", error);
-      });
+      .catch((error) => console.error("Erro:", error));
   }
 
   return (
