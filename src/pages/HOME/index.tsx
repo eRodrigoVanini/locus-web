@@ -1,30 +1,24 @@
-import { SimulationForm } from "../../components/SimulationForm";
+import {
+  SimulationForm,
+  type SimulationPayload,
+} from "../../components/SimulationForm";
 import "./style.css";
 
 export function Home() {
-  function handleSimulationSubmit(lotData: any) {
-    if (!lotData.cityId || !lotData.area) {
-      alert("Preencha todos os campos!");
-      return;
-    }
-
-    const payload = {
-      ...lotData, // Espalha os dados (cityId, zoneId, etc.)
-    };
-
+  function handleSimulationSubmit(data: SimulationPayload) {
     fetch("http://localhost:3000/simulations", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(payload), // Envia o objeto montado
+      body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((data) => {
-        console.log("Sucesso:", data);
-        alert("Simulação salva com sucesso!");
+      .then((respostaApi) => {
+        console.log(respostaApi);
+        alert("Sucesso!");
       })
-      .catch((error) => console.error("Erro:", error));
+      .catch((error) => console.error(error));
   }
 
   return (
