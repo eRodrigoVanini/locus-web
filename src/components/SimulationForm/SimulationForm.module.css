@@ -1,4 +1,4 @@
-.simulation-card {
+.simulationCard {
   background: white;
   padding: 2.5rem;
   border-radius: 16px;
@@ -9,7 +9,7 @@
   border: 1px solid rgba(0, 0, 0, 0.02);
 }
 
-.form-header h3 {
+.formHeader h3 {
   margin-top: 0;
   margin-bottom: 1.5rem;
   color: #333;
@@ -17,14 +17,14 @@
   font-weight: 600;
 }
 
-.form-group {
+.formGroup {
   margin-bottom: 1.2rem;
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
-.form-group label {
+.formGroup label {
   font-size: 0.85rem;
   color: #666;
   margin-bottom: 0.5rem;
@@ -33,8 +33,8 @@
   letter-spacing: 0.5px;
 }
 
-.form-group select,
-.form-group input {
+.formGroup select,
+.formGroup input {
   padding: 0.9rem;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -46,13 +46,13 @@
 }
 
 /* Estado visual de disabled para quando não tiver dados */
-.form-group select:disabled {
+.formGroup select:disabled {
   background-color: #f0f0f0;
   color: #999;
   cursor: not-allowed;
 }
 
-.btn-simulate {
+.btnSimulate {
   width: 100%;
   padding: 1rem;
   margin-top: 1rem;
@@ -66,7 +66,7 @@
   transition: all 0.2s ease;
 }
 
-.btn-simulate:hover {
+.btnSimulate:hover {
   background-color: #333;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);

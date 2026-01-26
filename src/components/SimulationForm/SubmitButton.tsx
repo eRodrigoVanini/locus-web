@@ -1,4 +1,4 @@
-import styles from "./Submit.module.css";
+import styles from "./SubmitButton.module.css";
 
 type SubmitButtonProps = {
   text: any;

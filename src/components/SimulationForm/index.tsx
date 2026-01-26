@@ -84,9 +84,9 @@ export function SimulationForm({ handleSubmit, btnText }: SimulationFormProps) {
   };
 
   return (
-    <div className={style.simulationCard}>
+    <div className={`${style.simulationCard} ${style.formGroup}`}>
       <form onSubmit={submit}>
-        <div className={style.formHeader}>
+        <div className={`${style.formHeader} ${style.formGroup}`}>
           <h3>Simular Viabilidade</h3>
         </div>
 
