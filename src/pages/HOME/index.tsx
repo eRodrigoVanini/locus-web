@@ -5,7 +5,6 @@ export function Home() {
   return (
     <div className="home-container">
       <div className="hero-wrapper">
-       
         <div className="hero-text">
           <h1>
             Descubra o potencial
@@ -18,9 +17,8 @@ export function Home() {
           </p>
         </div>
 
-       
         <div className="hero-form-container">
-          <SimulationForm />
+          <SimulationForm btnText="Calcular Agora" />
         </div>
       </div>
     </div>

@@ -1,8 +1,13 @@
 import style from "./SimulationForm.module.css";
 import Select from "./Select";
 import SubmitButton from "./SubmitButton";
+import Input from "./Input";
 
-export function SimulationForm() {
+type SimulationFormProps = {
+  btnText: string;
+};
+
+export function SimulationForm({ btnText }: SimulationFormProps) {
   return (
     <div className={style.simulationCard}>
       <form>
@@ -10,39 +15,33 @@ export function SimulationForm() {
           <h3>Simular Viabilidade</h3>
         </div>
 
-        <div className={style.formGroup}>
-          <Select
-            name="citySelect"
-            text="Selecione o Município"
-            options={[]}
-            handleOnChange={() => {}}
-            value=""
-          />
-        </div>
-
-        <div className={style.formGroup}>
-          <label>Zona</label>
-          <select disabled>
-            <option>Selecione a zona...</option>
-          </select>
-        </div>
-
-        <div className={style.formGroup}>
-          <label>Tipo de uso</label>
-          <select disabled>
-            <option>Selecione o uso...</option>
-          </select>
-        </div>
-
-        <div className={style.formGroup}>
-          <label>Área do Lote (m²)</label>
-          <input type="number" placeholder="Ex: 500" />
-        </div>
-
-        <SubmitButton
-          text="Calcular Agora"
-          name="calculateButton"
+        <Select
+          name="citySelect"
+          text="Selecione o Município"
+          options={[]}
+          handleOnChange={() => {}}
+          value=""
         />
+
+        <Select
+          name="citySelect"
+          text="Selecione a Zona"
+          options={[]}
+          handleOnChange={() => {}}
+          value=""
+        />
+
+        <Select
+          name="citySelect"
+          text="Selecione o Tipo de Uso"
+          options={[]}
+          handleOnChange={() => {}}
+          value=""
+        />
+
+        <Input text="Área do Lote (m²)" name="lotArea" value="" />
+
+        <SubmitButton text={btnText} />
       </form>
     </div>
   );

@@ -2,15 +2,13 @@ import styles from "./Submit.module.css";
 
 type SubmitButtonProps = {
   text: string;
-  name: string;
 };
 
-function SubmitButton({ text, name }: SubmitButtonProps) {
+function SubmitButton({ text }: SubmitButtonProps) {
   return (
     <div>
       <button
         type="button"
-        name={name}
         className={styles.btn}
       >
         {text}
