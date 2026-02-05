@@ -1,11 +1,16 @@
 .home-container {
   min-height: 100vh;
   width: 100%;
-  background-color: #f8f9fa; /* Fundo cinza gelo elegante */
+  background-image: url("../../assets/backg-00.png");
+  background-color: #1c1c1c;
+  background-size: 40rem;
+  background-repeat: no-repeat;
+  background-position: right;
+  /*background-color: #f8f9fa; /* Fundo cinza gelo elegante */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Inter', system-ui, sans-serif; /* Sugestão de fonte limpa */
+  font-family: "Inter", system-ui, sans-serif; /* Sugestão de fonte limpa */
 }
 
 .hero-wrapper {
@@ -28,14 +33,14 @@
 .hero-text h1 {
   font-size: 3.5rem;
   line-height: 1.1;
-  color: #111;
+  color: #a03432;
   margin-bottom: 1.5rem;
   letter-spacing: -1.5px; /* Deixa o título mais "fechado" e moderno */
 }
 
 .hero-text p {
   font-size: 1.25rem;
-  color: #666;
+  color: #fafafa;
   line-height: 1.6;
   max-width: 450px;
 }

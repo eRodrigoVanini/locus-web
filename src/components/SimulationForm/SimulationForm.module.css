@@ -1,5 +1,6 @@
 .simulationCard {
   background: white;
+  opacity: 60%;
   padding: 2.5rem;
   border-radius: 16px;
   /* Sombra moderna e suave para dar profundidade */
